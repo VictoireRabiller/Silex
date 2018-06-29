@@ -1,0 +1,57 @@
+{{ include('header.twig') }}
+
+  
+		<form action="customers" method="GET">
+            <fieldset>
+                <legend>Recherche de clients</legend>
+                <ul>
+                    <li>
+                        <label for="country">Pays :</label>
+                        <input id="country" name="country" type="text">
+                    </li>
+                    <li>
+                        <button class="button button-primary" type="submit">Rechercher</button>
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+        </main>
+    
+        <footer>
+            <hr>
+                <table class="generic-table">
+                <caption>Liste des clients pour le pays</caption>
+                <thead>
+                    <tr>
+                        <th>Société</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Adresse</th>
+                        <th>Ville</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for customer in customers %}
+                    <tr>
+                        <td>{{customer.customerName}}</td>
+                        <td>{{customer.contactLastName}}</td>
+                        <td>{{customer.contactFirstName}}</td>
+                        <td>{{customer.addressLine1}}<br></td>
+                         <td>{{customer.city}}</td>
+        
+                    </tr>
+                    {% endfor %}
+            
+        
+        <ul>
+
+
+            <li><a href="{{ path('home') }}">Accueil</a></li>
+        </ul>
+
+
+    </footer>
+
+    
+</body>
+</html>

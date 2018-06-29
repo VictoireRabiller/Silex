@@ -1,0 +1,22 @@
+{{ include('header.twig') }}
+
+  
+		<p>Hello Customer {{firstname}} {{name}}</p>
+    
+	</main>
+
+    <footer>
+        <ul class="link-list">
+            <li><a href="{{ path ('hello')}}">Hello World</a></li>
+
+            <li><a href="{{ path ('customers')}}">Clients</a></li>
+
+            <li><a href="{{ path ('bonjour')}}">Dire Bonjour Isa !</a></li>
+            <li><a href="{{ path ('bonjour')}}">Dire Bonjour Tom !</a></li>
+
+            <li><a href="{{ path ('flickr')}}">Flickr</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
